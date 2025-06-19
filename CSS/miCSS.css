@@ -1,0 +1,1050 @@
+
+/* Estilos DE LAS DIFERENTES SECCIONES Y EFECTOS DE LA WEB */
+
+		body {
+		  line-height: 1.6;
+          margin: 0;
+          padding: 0;
+		  font-size: 19px;
+		  font-family: Arial, sans-serif;
+		}
+		
+        main {
+            padding: 20px;
+			margin-top: 80px; /* Adjust the value to match the menu height */
+        }
+		
+		p {
+			/*font: oblique 110% Arial, sans-serif;*/
+			font-family: Arial, sans-serif;
+			font-size: 19px;
+			font-weight: 500;
+		}
+		
+		.check-list, .sin-puntos {
+		  list-style: none; /* Elimina la viñeta por defecto */
+		  padding: 0;
+		  margin: 0; /* Asegúrate de que no haya margen extra */
+		}
+
+		.check-list li {
+		  position: relative;
+		  padding-left: 45px;
+		  margin-bottom: 10px;
+		}
+
+		.check-list li::before {
+		  content: '✓'; /* Símbolo de check */
+		  position: absolute;
+		  left: 15px;
+		  top: 0;
+		  font-size: 19px; /* Ajusta el tamaño del símbolo */
+		  color: green; /* Ajusta el color del símbolo */
+		}
+			
+	
+		.alinear {
+			display: flex;
+			align-items: center; /* Centra verticalmente el contenido */
+		}
+		
+		.map{
+			flex:1;
+			padding: 10px 50px; /* Añadir relleno */
+        }
+        .section , .section1, .section2, .section3, .section4 {
+			flex:1;
+            margin-bottom: 10px;
+			min-width: 270px; /* Asegura que las secciones no se vuelvan demasiado estrechas */
+			padding: 10px 20px; /* Añadir relleno */
+								  
+	/*z-index: 1; /* Asegura que la imagen ampliada esté por encima de otros elementos */
+
+        }
+		.section2-padding-right {
+			flex:1;
+            margin-bottom: 10px;
+			min-width: 550px; /* Asegura que las secciones no se vuelvan demasiado estrechas */
+			padding: 10px 20px; /* Añadir relleno */
+			padding-right: 80px;
+        }
+		.section2-padding-left {
+			flex:1;
+            margin-bottom: 10px;
+			min-width: 550px; /* Asegura que las secciones no se vuelvan demasiado estrechas */
+			padding: 10px 20px; /* Añadir relleno */
+			padding-left: 80px;
+        }
+		
+		.casita {
+		  width: 150px;
+		  height: 150px;
+		  object-fit: cover; /* Asegura que la imagen mantenga su proporción y llene el contenedor */
+		  animation: fadeIn 3s ease-in-out forwards; /* Animacion de la imagen al cargar la pagina */
+		  transition: transform 0.9s ease; /* Suaviza el efecto de la transición */
+		  z-index: 1; /* Establece un índice z inicial */
+		  position: relative; /* Asegura que la imagen pueda utilizar z-index */
+		}
+
+		/* El siguiente Keyframs ajusta el comienzo y final de de la 'animation' sobre las imagenes con la clase 'casita' */
+		@keyframes fadeIn {
+		  from { opacity: 0; }
+		  to { opacity: 1; }
+		}
+		
+		.casita:hover {
+		  transform: translate(50%, 50%) scale(2.9); /* Aumenta el tamaño de la imagen al pasar el ratón */
+		   z-index: 500; /* Asegura que la imagen ampliada esté por encima de otros elementos */
+		}
+
+
+        .section .icono , .section1 .icono, .section2 .icono, .section3 .icono, .section4 .icono{
+			width: 40px; /* Ajusta el ancho al tamaño deseado */
+			height: auto; /* Mantiene la proporción de la imagen */
+		}
+		
+		
+		.section2-padding-right a, .section2-padding-left a{
+		  /* Eliminar estilos por defecto de enlaces */
+		  display: inline-block; /* Convertir el enlace en un bloque en línea */
+		  padding: 10px 20px; /* Añadir relleno */
+		  border: none; /* Eliminar borde */
+		  border-radius: 30px; /* Redondear las esquinas */
+		  background-color: #4CAF50; /* Color de fondo verde */
+		  color: white; /* Color de texto blanco */
+		  text-decoration: none; /* Eliminar subrayado */
+		  cursor: pointer; /* Cambiar cursor a mano al pasar el ratón */
+		  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+		}
+		
+		.section a, .section1 a, .section2 a, .section3 a, .section4 a{
+		  /* Eliminar estilos por defecto de enlaces */
+		  display: inline-block; /* Convertir el enlace en un bloque en línea */
+		  border: none; /* Eliminar borde */
+		  color: black; /* Color de texto blanco */
+		  text-decoration: none; /* Eliminar subrayado */
+		  cursor: pointer; /* Cambiar cursor a mano al pasar el ratón */
+		}
+
+		.section2-padding-right a:hover, .section2-padding-left a:hover {
+		  background-color: #3e8e41; /* Color de fondo verde más oscuro al pasar el ratón */
+		}
+
+		.section a:hover, .section1 a:hover, .section2 a:hover, .section3 a:hover, .section4 a:hover {
+		  text-decoration: initial; /* Add underline on hover */
+		   color: #3e8e41; 	   
+		}
+		
+/*-----------------------------------------------------------------------*/
+
+/*clase que define el contendor DIV que se crea cuadno pulsas un boton del menu y contine la imagen de la hoja callendo*/
+		.leaf {
+			position: absolute;
+			width: 50px; /* Ajusta el tamaño según tu imagen */
+			height: 50px; /* Ajusta el tamaño según tu imagen */
+			background-image: url('../ImagenesGaleria/HojaSuelta/HojaSuelta.png');
+			background-size: contain; /* Asegura que la imagen completa quepa dentro del contenedor */
+			background-repeat: no-repeat; /* Evita que la imagen se repita */
+			animation: fall linear;
+			animation-iteration-count: 1; /* Ejecutar la animación solo una vez */
+					  z-index: 60; /* Establece un índice z inicial */
+
+		}
+
+		@keyframes fall {
+			0% {
+				top: 0;
+				transform: rotate(0deg);
+			}
+			100% {
+				top: 100vh; /* Hacer que caigan hasta la base de la ventana */
+				transform: rotate(360deg);
+			}
+		}
+
+
+
+
+/*-----------------------------------------------------------------------*/
+
+/*clase contenedor para formatear un DIV SIN FOTO DE FONDO y con varias secciones */
+		.containerDivnormal {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea */
+			position: relative;
+			overflow: hidden;
+		}
+	
+		.containerDivnormal .section1 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%) - 10px); /* Ajusta el ancho de cada sección */
+		}  
+		
+		.containerDivnormal .section2 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/3) - 10px); /* Ajusta el ancho de cada sección */
+		  padding-left: 35px; /* Introduce una sangría de 20px en todo el parrafo*/
+		}
+
+		.containerDivnormal .section3 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/4) - 10px); /* Ajusta el ancho de cada sección */
+		  padding-left: 15px; /* Introduce una sangría de 20px en todo el parrafo*/
+		}
+		
+		.containerDivnormal .section4 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/5) - 10px); /* Ajusta el ancho de cada sección */
+		}
+		
+		
+		.containerDivnormal h1 {
+			font-family: Arial, sans-serif;
+			font-size: 55px;
+			font-weight: 800;
+			color: #18623D; /* Cambia el color del texto a blanco */
+			text-align: left;
+			margin: 0px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		.containerDivnormal h2 {
+			font-family: Arial, sans-serif;
+			/* font-size: 23px; */
+			font-weight: 300;
+			color: #208352; /* Cambia el color del texto a blanco */
+			text-align: left;
+			margin: 0px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		
+		.containerDivnormal h3 {
+			font-family: Arial, sans-serif;
+			/* font-size: 18px; */
+			font-weight: 300;
+			color: #28A466; /* Cambia el color del texto a blanco */
+			text-align: left;
+			margin: 0px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		.containerDivnormal .text-center {
+		  text-align: center;
+		  margin-bottom: 1em;
+		  color: #208352;
+		}
+/*-----------------------------------------------------------------------*/
+	/* Esta clase es referenciada por el codigo JS para hacer la transicion más suave de imanges */
+		#dynamicBgDiv {
+			transition: background-image 2s ease-in-out; /* Transición suave de 1 segundo */
+		}
+
+		
+	/*clase contenedor para FORMATEAR UN  DIV CON UN FONDO DE FOTO Y VARIAS SECCIONES*/
+		.containerDiv {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea */
+			position: relative;
+			overflow: hidden;
+			min-height: 250px; /* Ajusta la altura según necesites */
+			background-size: cover; /* Cover the container with the image */
+			background-position: center;
+		}
+
+		.containerDiv::before {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-size: cover;
+		  background-position: center;
+		  z-index: -1;
+		  transition: background-image 1s ease-in-out;
+		}
+		
+		.containerDiv h1 {
+			font-family: Arial, sans-serif;
+			font-size: 55px;
+			font-weight: 800;
+			color: #fff; /* Cambia el color del texto a blanco */
+			text-align: center;
+			margin: 20px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		.containerDiv h2 {
+			font-family: Arial, sans-serif;
+			font-size: 23px;
+			font-weight: 300;
+			color: #fff; /* Cambia el color del texto a blanco */
+			text-align: center;
+			margin: 20px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		
+		
+		/* Seleccionar solo el texto o cualqueir otro parametro para los sections dentro de .containerDiv */
+		.containerDiv .section1 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%) - 10px); /* Ajusta el ancho de cada sección */
+		}  
+		.containerDiv .section2 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/3) - 10px); /* Ajusta el ancho de cada sección */
+		}
+
+		.containerDiv .section3 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/4) - 10px); /* Ajusta el ancho de cada sección */
+		}
+		.containerDiv .section4 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/5) - 10px); /* Ajusta el ancho de cada sección */
+		}
+
+
+/*-----------------------------------------------------------------------*/
+
+/* Estilos de los DIV de la seccion de ofertas */
+		.offer-section {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 40vh;
+		}
+
+
+		.offer {
+			width: 250px;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: center;
+			color: white;
+		}
+
+		.offer h2 {
+			margin: 0;
+		}
+
+		.offer p {
+			margin: 10px 0;
+		}
+
+		.offer .price {
+			font-size: 1.6em;
+			font-weight: bold;
+		}
+
+		.offer .details {
+			color: #333;
+			background-color: white;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		/* Colores específicos para cada oferta */
+		.green {
+			background-color: #00b050;
+		}
+
+		.purple {
+			background-color: #c000c0;
+		}
+
+		.blue {
+			background-color: #4f81bd;
+		}
+		.yellow {
+			background-color: #FFBF00;
+			box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+			width: 350px;
+
+
+		}
+
+		/* Estilo DIV ofertas (pantallas pequeñas)*/
+		@media (max-width: 960px) { /* Ajusta el ancho según necesites */
+			.offer-section {
+				flex-direction: column; /* Alinea los elementos verticalmente */
+				height: auto; /* Ajusta la altura automáticamente */
+				align-items: center; /* Estira los elementos para llenar el ancho */
+			}
+
+			.offer {
+				width: 250px; /* Los elementos ocupan todo el ancho */
+				margin-bottom: 20px; /* Espacio entre los elementos */
+			}
+		}
+
+		
+/*-----------------------------------------------------------------------*/
+	
+/* Estilos de la Cabecera y la Barra de Navegación */
+
+		.sticky-header {
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+		  background-color: #fff;
+		  z-index: 100;
+		}
+
+		.header-container {
+		  top: 0;
+		  left: 0;
+		  width: 100%;  /* Span the entire width */
+		  height: 80px;  /* Adjust height as needed */
+		  background-color: #fff;  /* Set the background color */
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 10px 20px;
+		}
+		
+        .logo img {
+            height: 80px; /* Ajusta según el tamaño de tu logo */
+			margin-left: 20px;
+        }
+		
+		.navigation-wrapper {
+			flex: 1;
+			display: flex;
+			justify-content: center; /* ** Centra el menú horizontalmente ** */
+		}
+		
+        .navigation-wrapper nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Mostrar el menú horizontalmente */
+        }
+		
+        .navigation-wrapper nav ul li {
+            margin-left: 20px;
+        }
+		
+        .navigation-wrapper nav ul li a {
+            color: #28A466;
+            text-decoration: none;
+            font-weight: bold;
+			transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para transformaciones y sombras */
+			padding: 10px 15px; /* Añadir padding para un mejor efecto visual */
+			border-radius: 5px; /* Bordes redondeados */
+		}
+
+		.navigation-wrapper nav ul li a:hover {
+			color: #fff;
+			transform: scale(1.1); /* Aumenta el tamaño del botón */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+			background-color: #3ACF85; /* Cambia el color de fondo al pasar el ratón */
+		}
+		
+	/* Ocultar el menú y mostrar el botón en pantallas pequeñas */
+		/* Inicialmente oculta el botón menú para pantallas pequeñas y el propio menu de las pantallas pequeñas  */
+		.menu-button {
+		  display: none;
+		  background: none;
+		  border: none;
+		  font-size: 24px;
+		  color: #28A466;
+		  font-weight: bold;
+		  justify-content: flex-end;
+		  margin-right: 5px;
+		}
+		
+		  .mobile-nav {
+			display: none;
+		}
+
+	/* Estilos para el menú responsivo (pantallas pequeñas) */
+		@media (max-width: 1250px) {
+			.navigation-wrapper nav ul {
+				display: none;
+				flex-direction: column;  /* Ordenar verticalmente en modo responsivo */
+			}
+
+			.menu-button {
+			  display: block;
+			  background: none;
+			  border: none;
+			  font-size: 24px;
+			  color: #28A466;
+			  font-weight: bold;
+			}
+
+			 .mobile-nav {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				z-index: 50;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				color: #28A466;
+			  }
+
+			  .mobile-nav nav ul {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-decoration: none; /* Quita el subrayado */
+				list-style: none; /* Quita los marcadores de lista */
+			  }
+
+			  .mobile-nav nav ul li {
+				margin: 15px 0;
+				text-decoration: none; /* Quita el subrayado */
+				list-style: none; /* Quita los marcadores de lista */
+			  }
+
+			  .mobile-nav nav ul li a {
+				color: #28A466;
+				font-weight: bold;
+				font-size: 24px;
+				text-decoration: none; /* Quita el subrayado */
+				list-style: none; /* Quita los marcadores de lista */
+			  }
+			  .mobile-nav nav ul li a:hover {
+				color: #fff;
+				transform: scale(1.1); /* Aumenta el tamaño del botón */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+			  }
+
+			  .close-button {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				background: none;
+				border: none;
+				font-size: 24px;
+				color: #fff;
+			  }
+
+			  .mobile-nav.show {
+				display: flex;
+			  }
+		  
+			/* clases casita para aumentar las imagenes en moviles */
+			  .casita {
+				  
+			 transform-origin: center; /* Asegura que la imagen crezca desde el centro */
+			  }
+			  
+			  .casita:hover {
+
+				transform: translate(50%, 50%) scale(2.1); /* Ampliar la imagen desde el centro */
+			  }
+			  
+			  
+			  
+		}
+
+
+/*-----------------------------------------------------------------------*/
+
+
+/* Estilos Cuadro Chequeo de disponibilidad */
+	
+		#myDiv {
+		  display: flex; /* Make the div a Flexbox container */
+		  align-items: center; /* Center vertically */
+		  justify-content: center; /* Center horizontally */
+		  max-width: 1100px; /* Set the width as before */
+		  margin: auto;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-sizing: border-box;
+		  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+		 }
+		 
+		form#availabilityForm {
+		  background-color: #fff;
+		  padding: 20px;
+		  border-radius: 8px;
+		  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+		  gap: 10px;
+		  align-items: center;
+		}
+
+		form#availabilityForm input {
+		  padding: 10px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  font-size: 14px;
+		  flex: 1;
+		}
+		
+		form#availabilityForm input#emailInput {
+		  width: 270px; /* Adjust the value as desired */
+		}
+
+		form#availabilityForm button {
+		  background-color: #4CAF50;
+		  color: #fff;
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  font-size: 16px;
+		  cursor: pointer;
+		}
+
+		form#availabilityForm button:hover {
+		  background-color: #3e8e41;
+		}
+
+/*-----------------------------------------------------------------------*/		
+/* Estilos para los campos del formulario de contactos */
+
+		.containerForm {
+		  display: flex; /* Convertir el div en un contenedor Flexbox */
+		  align-items: flex-start; /* Alinear verticalmente a la izquierda */
+		  justify-content: flex-start; /* Alinear horizontalmente a la izquierda */
+		  max-width: 800px;
+		  margin: 1% 1%;
+		  padding: 20px;
+		  background-color: #fff;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-sizing: border-box;
+		  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+		  color: #208352;
+		}
+		
+		.containerForm .section{
+			flex:1;
+            margin-bottom: 0px;
+			min-width: 270px; /* Asegura que las secciones no se vuelvan demasiado estrechas */
+			padding: 10px 0px; /* Añadir relleno */
+        }
+		
+		/* Add styling to the form container */
+		.section form {
+		  display: flex; /* Make the form a flexbox container */
+		  flex-direction: column; /* Stack elements vertically */
+		  gap: 10px; /* Add some spacing between form elements */
+		  
+		}
+
+		/* Style the input fields and textarea */
+		.section form input, 
+		.section form textarea {
+		  padding: 10px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  font-size: 14px;
+		  max-width: 570px; /* Set a fixed width for all input fields (optional) */
+		  /* min-width: 100px; */
+		}
+
+		/* Adjust width for specific fields if needed  */
+		.section form input#name,
+		.section form input#email,
+		.section form input#phone,
+		.section form input#arrival,
+		.section form input#departure {
+		  max-width: 270px; /* Set a fixed width for all input fields (optional) */
+		}
+
+		/* Style the textarea */
+		.section form textarea {
+		  resize: vertical; /* Allow users to resize the textarea */
+		  min-height: 100px; /* Set a minimum height for the textarea */
+		}
+
+		/* Style the submit button */
+		.section form button {
+		  background-color: #4CAF50;
+		  color: #fff;
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  font-size: 16px;
+		  cursor: pointer;
+		  max-width: 250px; 
+		}
+
+		.section form button:hover {
+		  background-color: #3e8e41;
+		}
+
+/*-----------------------------------------------------------------------*/
+
+/* Estilos icono flotante de Whatsapp */
+		.whatsapp-float {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 70px;
+			right: 60px;
+			background-color: #25d366;
+			transition: background-color 0.3s ease; /* Add transition for hover */
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 3px #999;
+			z-index: 100;
+		}
+		.whatsapp-float:hover {
+			background-color: #128C7E;
+			display: block; /* Show the text on hover */
+			opacity: 1; /* Make the text fully visible */
+		}
+		.whatsapp-float i {
+			margin-top: 16px;
+		}
+		.whatsapp-text {
+			display: none; /* Hide the text initially */
+			position: absolute;
+			top: 50%;
+			right: calc(100% + 12px); /* Add icon width + padding */
+			transform: translateY(-50%);
+			background-color: #2ECC71;; 
+    		padding: 8px 12px; /* Adjust padding as needed */
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: 600; /* Medium weight */
+			color: white; /* Set text color to white */
+			opacity: 0; /* Hide the text initially */
+			transition: all 0.3s ease; /* Add a smooth transition */
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+		}
+		.whatsapp-float:hover .whatsapp-text {
+			display: block; /* Show the text on hover */
+			opacity: 1; /* Make the text fully visible */
+		}
+
+		
+/*-----------------------------------------------------------------------*/		
+		
+	/* Banner de politicas y avisos*/
+		.banner {
+		  width: 98%;
+		  height: 100%;
+		  background-color: #f0f0f0;
+		  border-radius: 20px;
+		  padding: 20px;
+		  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		  text-align: center;
+		}
+
+		.banner h1 {
+
+			font-family: Arial, sans-serif;
+			font-size: 55px;
+			font-weight: 800;
+			color: #18623D; /* Cambia el color del texto a blanco */
+			text-align: left;
+			margin: 20px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+
+		.avisoypoliticas {
+		  width: 90%; /* Adjust width as needed */
+		  margin: 0 auto; /* Center the aviso legal content */
+		  padding: 20px;
+		  border: 1px solid #ccc;
+		  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		  background-color: #fff;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-sizing: border-box;
+		  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+		  color: Black;
+		}
+
+		.avisoypoliticas h2 {
+			font-family: Arial, sans-serif;
+			font-size: 23px;
+			font-weight: 300;
+			color: #208352; 
+			text-align: left;
+			margin: 20px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+
+		.avisoypoliticas p {
+		  font-size: 19px;
+		  line-height: 1.5;
+		  margin-bottom: 15px;
+		}
+
+		.aavisoypoliticas a {
+		  color: #2196F3; /* Blue link color */
+		  text-decoration: none;
+		  border-bottom: 1px dotted #2196F3;
+		}
+
+		.avisoypoliticas a:hover {
+		  text-decoration: underline;
+		}
+
+/*-----------------------------------------------------------------------*/
+
+	/* Estilos del pie de pagina */
+		footer {
+		  background-color: #333; /* Dark background color */
+		  color: #fff; /* White text color */
+		  padding: 20px;
+		  text-align: center;
+		}
+
+		footer p {
+		  margin: 0; /* Remove default paragraph margin */
+		}
+
+		footer a {
+		  color: #fff; /* White link color */
+		  text-decoration: none; /* Remove default link underline */
+		  font-weight: 600; /* Hacer el texto más grueso con mayor granularidad */
+		}
+
+		footer a:hover {
+		  text-decoration: underline; /* Add underline on hover */
+		   color: #ffcc00; /* Gold accent color */
+		}
+
+		footer span {
+		  color: #fff; /* white color */
+		}
+
+
+
+/*-----------------------------------------------------------------------*/
+
+/* Estilos de la Galeria */
+
+		.container {
+		  max-width: 1700px;
+		  margin: 0% 5% 5% 5%; /* Top 0%, Right 5%, Bottom 5%, Left 5% */
+		  padding: 20px;
+		  background-color: #fff;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-sizing: border-box;
+		  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+		}
+
+
+		.text-center {
+		  text-align: center;
+		  margin-bottom: 1em;
+		  color: #208352;
+		}
+
+		.lightbox-gallery {
+		  display: flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+
+		.lightbox-gallery div > img {
+		  max-width: 100%;
+		  display: block;
+		  cursor:pointer;
+		}
+
+		.lightbox-gallery div {
+		  margin: 10px;
+		  flex-basis: 180px;
+		}
+
+		@media only screen and (max-width: 480px) {
+		  .lightbox-gallery {
+			flex-direction: column;
+			align-items: center;
+		  }
+
+		  .lightbox > div {
+			margin-bottom: 10px;
+		  }
+		}
+
+		/*Lighbox CSS*/
+
+		.lightbox {
+		  display: none;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.8);
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 1000;
+		  padding-top: 50px; /*este valor baja la foto de la galeria para que no sea tapada con el menu fijo de navegación*/
+		  box-sizing: border-box;
+		  overflow-y: auto; /* Permitir desplazamiento vertical cuando se está monstrando la imagen grande */
+		}
+
+		.lightbox img {
+		  display: block;
+		  margin: auto;
+		  max-width: 100%;
+		  max-height: calc(100vh - 120px); /* Ajusta para que la imagen no exceda la altura de la ventana */
+		}
+
+		.lightbox .caption {
+		  margin: 15px auto;
+		  width: 50%;
+		  text-align: center;
+		  font-size: 1em;
+		  line-height: 1.5;
+		  font-weight: 700;
+		  color: #eee;
+		}
+
+		.no-scroll {
+		  overflow: hidden;
+		}		
+
+
+		.lightbox .close, .lightbox .prev, .lightbox .next {
+			position: absolute;
+			top: 50%;
+			color: white;
+			font-size: 2rem;
+			cursor: pointer;
+			user-select: none;
+			transform: translateY(-50%);
+		}
+
+		.lightbox .close {
+			top: 20px;
+			right: 20px;
+			font-size: 3rem;
+		}
+
+		.lightbox .prev {
+			left: 10px;
+		}
+
+		.lightbox .next {
+			right: 10px;
+		}
+
+
+
+/*-----------------------------------------------------------------------*/
+
+/* estolos para el botón subir al inicio de pantalla */
+		#scrollTopBtn {
+		  display: none; /* Oculto por defecto */
+		  position: fixed;
+		  bottom: 20px;
+		  right: 20px;
+		  z-index: 99;
+		  font-size: 18px;
+		  border: none;
+		  outline: none;
+		  background-color: #333;
+		  color: white;
+		  cursor: pointer;
+		  padding: 15px;
+		  border-radius: 4px;
+		}
+
+		#scrollTopBtn:hover {
+		  background-color: #555;
+		}
+
+
+/*-----------------------------------------------------------------------*/
+/* Estilos especificos en Pagina de Inicio - Estilos carousel pagina de incio y lista doble*/
+
+		.containercarousel {
+		  width: 513px;
+		  height: 400px;
+		  max-width: 1700px;
+		  margin: 5% auto;
+		  padding: 20px;
+		  background-color: #fff;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-sizing: border-box;
+		  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+		}
+		.carousel img {
+			
+			height: 50%;
+			width: 50%; /* Ocupar el 70% de la anchura de la pantalla */
+
+
+		}
+		.lista-doble {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.lista-doble ul {
+			list-style: none;
+			padding: 0;
+			width: 48%; /* Ajusta el ancho para que quepan dos columnas */
+		}
+
+		.lista-doble li {
+			margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+		}
+
+		.boton-izquierda {
+		  text-align: left; /* Centra el contenido horizontalmente */
+		  margin-top: 20px; /* Añade un margen para separar el botón de la lista */
+		}
+
+		.boton-izquierda img {
+		   margin-right: 10px; /* Espacio entre el ícono y el texto */
+		   width: 20px; /* Ancho del ícono */
+		   height: 20px; /* Alto del ícono */
+		}
+		.boton-centrado {
+		  text-align: center; /* Centra el contenido horizontalmente */
+		  margin-top: 20px; /* Añade un margen para separar el botón de la lista */
+		}
+
+		.boton-centrado img {
+		   margin-right: 10px; /* Espacio entre el ícono y el texto */
+		   width: 20px; /* Ancho del ícono */
+		   height: 20px; /* Alto del ícono */
+		}
+	
+	/* Estilos para el Contenedor Carusel(pantallas pequeñas) */
+		@media (max-width: 1350px) { /* Ajusta el ancho según necesites */
+			.section2-padding-right {
+				padding: 10px 10px; /* Añadir relleno */
+				padding-left: 35px; /* Añadir relleno */
+
+			}
+			
+			.section2-padding-left {
+				
+				padding: 10px 10px; /* Añadir relleno */
+				padding-left: 35px; /* Añadir relleno */
+			} 
+		}
+		@media (max-width: 700px) { /* Ajusta el ancho según necesites */
+		.section2-padding-right {
+			padding: 10px 10px; /* Añadir relleno */
+			padding-left: 35px; /* Añadir relleno */
+
+        }
+		
+		.section2-padding-left {
+			
+			padding: 10px 10px; /* Añadir relleno */
+			padding-left: 35px; /* Añadir relleno */
+        } 
+		.boton-centrado {
+			text-align: left; /* Centra el contenido horizontalmente */
+			margin-top: 20px; /* Añade un margen para separar el botón de la lista */
+			margin-left: 20px;
+		}
+	}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Rurla Los Robles</title>
+	<!-- ... otros elementos ... -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="CSS/miCSS.css">
+	<script src="JS/miArchivo.js"></script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="header-container"> 
+			<div class="logo">
+			  <a href="index.html">
+				<img src="ImagenesGaleria/Logo/Logo_Los_Robles.png" alt="Casa Rural Los Robles">
+			  </a>
+			</div>
+			<!-- ... Menu navegación pantallas Grandes ... -->
+			<div class="navigation-wrapper">
+			<nav>
+				<ul id="nav-menu">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="lacasa.html">Casa Rural</a></li>
+					<li><a href="tarifas-disponibilidad.html">Tarifas y Disponibilidad</a></li>
+					<li><a href="entorno.html">Entorno y Actividades</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			<button class="menu-button" id="menuButton"> ☰ MENÚ</button>
+			</nav>
+			</div> 
+			<!-- ... Menu Navegación pantallas pequeñas... -->
+			<div class="mobile-nav" id="mobileNav">
+			<button class="close-button" id="closeButton">✕</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="lacasa.html">Casa Rural</a></li>
+					<li><a href="tarifas-disponibilidad.html">Tarifas y Disponibilidad</a></li>
+					<li><a href="entorno.html">Entorno</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+			</div>
+		</div>
+    </header> 
+    <main>
+	
+		<div class="containerDiv"  id="dynamicBgDiv">
+			<section class="section1">
+				<h1>Contactar</h1>
+				<h2>No te quedes con las ganas de conocernos, estaremos encantados de atender tus consultas.</h2>
+			</section>
+		</div>
+		
+		<div class="containerDivnormal">		
+			<section class="section1">
+				<p></p>
+				<h2>Formas de contacto </h2>
+				<p>¿Todavía tienes alguna duda sobre nuestra casa, la disponibilidad, o que puede ofrecerte nuestro maravilloso entorno?, no dudes en ponerte en contacto con nosotros, estaremos encantados de ayudarte.  <br/>
+				Puedes contactarnos por varios canales como el siguiente Formulario, nuestro Whatsapp, o directamente por Email, o Teléfono.</p>
+			</section>
+
+			<section class="section3">	
+			
+				<div class="containerForm">
+					<section class="section">
+						<h3>Formulario de contacto</h3>
+						</br>
+							<form id="my-form" action="https://formspree.io/f/xrbzeqlb" method="POST" enctype="multipart/form-data">
+							  <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+							  <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+							  <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+							  <input type="date" id="arrival" name="arrival" placeholder="Fecha de Entrada" required>
+							  <input type="date" id="departure" name="departure" placeholder="Fecha de Salida" required>
+							  <textarea id="message" name="message" placeholder="Indicar número de personas, mascotas, y cualquier duda sobre el alojamiento o entorno."></textarea>
+							  </br>
+							   <button id="my-form-button">Enviar</button>
+							  <p id="my-form-status"></p>
+							</form>
+					</section>
+				</div>
+				
+			</section>
+			<section class="section3">
+				<br/><br/><br/>
+				<h3>Información de contacto</h3></br>
+				<ul class="sin-puntos">
+					<li class= "alinear"><img class="icono" src="iconos/icono_persona_contacto.png" alt="Icono persona contacto"/><strong>&nbsp;&nbsp;&nbsp;Propietario:</strong></li>
+					<li class= "alinear">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sergio Robledo Monasterio</li></br>
+					<li class= "alinear"><img class="icono" src="iconos/icono_telefono.png" alt="Icono telefono contacto"/><strong>&nbsp;&nbsp;&nbsp;Teléfono:</strong></li>
+					<li class="alinear"> <a href="tel:+34678985395">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+34 678 985 395</a> </li>
+					<li class= "alinear"><img class="icono" src="iconos/icono_email.png" alt="Icono correo contacto"/><strong>&nbsp;&nbsp;&nbsp;Email:</strong></li>
+					<li class="alinear">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:ar.losrobles.valverde@gmail.com">ar.losrobles.valverde@gmail.com</a>      </li>
+					<li class= "alinear"><img class="icono" src="iconos/icono_ubicacion.png" alt="Icono ubicacion"/><strong>&nbsp;&nbsp;&nbsp;Dirección:</strong></li>
+				    <li class="alinear">
+						<a href="https://www.google.com/maps/@41.134531,-3.2220742,3a,75y,294.57h,91.38t/data=!3m7!1e1!3m5!1szm0hJqUumdapsXEtUULBKw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.3830092604616766%26panoid%3Dzm0hJqUumdapsXEtUULBKw%26yaw%3D294.5684245017767!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casa Rural Los Robles.<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Travesia de la Huerta S/N.<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zarzuela de Galve, Guadalajara
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<section class="section1">
+				<h2>Ubicación</h2>
+				<p>Nos encontramos en la localidad de Zarzuela de Galve, pedanía de Valverde de los Arroyos. En la provincia de Guadalajara.</p>
+				<div class="map">
+					<iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527m!2d-3.2320754!3d41.1324758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4385b44854893f%3A0x3345dd11e17b9be6!2s19238%20Zarzuela%20de%20Galve%2C%20Guadalajara%2C%20Spain!5e0!3m2!1sen!2ses!4v1234567890!5m2!1sen!2ses" 
+						width="100%" 
+						height="400" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy" 
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+			</section>
+			
+		</div>
+	</main>
+
+  	<a href="https://api.whatsapp.com/send/?phone=34678985395&text&type=phone_number&app_absent=0" 
+       class="whatsapp-float" 
+       target="_blank"
+       rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+		<span class="whatsapp-text">¿Podemos ayudarle?</span>
+    </a>
+
+	<button id="scrollTopBtn" title="Go to top">
+		<i class="fas fa-angle-up"></i>
+	</button>
+	  
+    <footer>
+        <div >
+			<span>© Copyright 2025 </span><a href="index.html">Casa Rural Los Robles</a> <span>Todos los derechos reservados.</span>
+			<span><p><a href="./Politicas/avisolegal.html">Aviso Legal</a>&nbsp;|&nbsp;<a href="./Politicas/politicaprivacidad.html">Política de Privacidad</a> | <a href="./Politicas/politicacookies.html">Política de Cookies</a> |&nbsp;<a href="./Politicas/politicacancelacionreservas.html">Política Reservas de Cancelación&nbsp;|</a> </span></<br><span>by PMM</span>
+			</p>	
+		</div>
+    </footer>
+</body>
+</html>

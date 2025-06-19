@@ -1,0 +1,564 @@
+
+/* Estilos DE LAS DIFERENTES SECCIONES Y EFECTOS DE LA WEB */
+
+		body {
+		  line-height: 1.6;
+          margin: 0;
+          padding: 0;
+		 
+		  font-family: "Open Sans", sans-serif;
+		}
+		
+        main {
+            padding: 20px;
+			margin-top: 80px; /* Adjust the value to match the menu height */
+        }
+		
+        .section , .section1, .section2, .section3, .section4 {
+			flex:1;
+            margin-bottom: 20px;
+			min-width: 300px; /* Asegura que las secciones no se vuelvan demasiado estrechas */
+			padding: 10px 20px; /* Añadir relleno */
+        }
+		
+
+
+
+		.section a, .section1 a, .section2 a, .section3 a, .section4 a {
+		  /* Eliminar estilos por defecto de enlaces */
+		  display: inline-block; /* Convertir el enlace en un bloque en línea */
+		  padding: 10px 20px; /* Añadir relleno */
+		  border: none; /* Eliminar borde */
+		  border-radius: 30px; /* Redondear las esquinas */
+		  background-color: #4CAF50; /* Color de fondo verde */
+		  color: white; /* Color de texto blanco */
+		  text-decoration: none; /* Eliminar subrayado */
+		  cursor: pointer; /* Cambiar cursor a mano al pasar el ratón */
+		  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+		}
+
+		.section a:hover, .section1 a:hover, .section2 a:hover, .section3 a:hover, .section4 a:hover {
+		  background-color: #3e8e41; /* Color de fondo verde más oscuro al pasar el ratón */
+		}
+
+
+		/*clase contenedor para formatear un DIV SIN FOTO DE FONDO y con varias secciones */
+		.containerDivnormal {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea */
+			position: relative;
+			overflow: hidden;
+			min-height: 700px; /* Ajusta la altura según necesites */
+		}
+		.containerDivnormal .section1 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%) - 10px); /* Ajusta el ancho de cada sección */
+		}  
+		.containerDivnormal .section2 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/2) - 10px); /* Ajusta el ancho de cada sección */
+		}
+
+		.containerDivnormal .section3 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/3) - 10px); /* Ajusta el ancho de cada sección */
+		}
+		.containerDivnormal .section4 {
+		  color: Black; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/4) - 10px); /* Ajusta el ancho de cada sección */
+		}
+
+
+		
+		/*clase contenedor para FORMATEAR UN  DIV CON UN FONDO DE FOTO Y VARIAS SECCIONES*/
+		.containerDiv {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea */
+			position: relative;
+			overflow: hidden;
+			min-height: 300px; /* Ajusta la altura según necesites */
+			background-size: cover; /* Cover the container with the image */
+			background-position: center;
+		}
+
+		.containerDiv::before {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-size: cover;
+		  background-position: center;
+		  z-index: -1;
+		  transition: background-image 1s ease-in-out;
+		}
+		
+		.containerDiv h1 {
+			font-family: Arial, sans-serif;
+			font-size: 85px;
+			font-weight: 800;
+			color: #fff; /* Cambia el color del texto a blanco */
+			text-align: center;
+			margin: 20px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		.containerDiv h2 {
+			font-family: Arial, sans-serif;
+			font-size: 32px;
+			font-weight: 300;
+			color: #fff; /* Cambia el color del texto a blanco */
+			text-align: center;
+			margin: 20px 0;
+			font-weight: bold; /* Hace el texto más grueso */
+		}
+		
+		
+		/* Seleccionar solo el texto o cualqueir otro parametro para los sections dentro de .containerDiv */
+		.containerDiv .section1 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%) - 10px); /* Ajusta el ancho de cada sección */
+		}  
+		.containerDiv .section2 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/2) - 10px); /* Ajusta el ancho de cada sección */
+		}
+
+		.containerDiv .section3 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/3) - 10px); /* Ajusta el ancho de cada sección */
+		}
+		.containerDiv .section4 {
+		  color: white; /* Cambiar el color del texto a blanco */
+		  flex-basis: calc((100%/4) - 10px); /* Ajusta el ancho de cada sección */
+		}
+	
+	
+/* Estilos de la Cabecera y la Barra de Navegación */
+		.navigation-wrapper {
+		  position: fixed; /* Position the item absolutely */
+		  left: 60%; /* Center horizontally */
+		  transform: translateX(-50%); /* Adjust for centering */
+		}
+		.sticky-header {
+		  position: sticky;
+		  top: 0;
+		  z-index: 1000;  /* Ensure it's above other elements */
+		}
+
+		.header-container {
+		  position: fixed;  /* Fix the background wrapper */
+		  top: 0;
+		  left: 0;
+		  width: 100%;  /* Span the entire width */
+		  height: 80px;  /* Adjust height as needed */
+		  background-color: #fff;  /* Set the background color */
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 10px 20px;
+		}
+		
+        .logo img {
+            height: 80px; /* Ajusta según el tamaño de tu logo */
+        }
+		
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+		
+        nav ul li {
+            margin-left: 20px;
+        }
+		
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+			transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para transformaciones y sombras */
+			padding: 10px 15px; /* Añadir padding para un mejor efecto visual */
+			border-radius: 5px; /* Bordes redondeados */
+		}
+
+		nav ul li a:hover {
+			transform: scale(1.1); /* Aumenta el tamaño del botón */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+			background-color: #f0f0f0; /* Cambia el color de fondo al pasar el ratón */
+		}
+		
+
+
+		/* Estilos para el menu en pantallas pequeñas */
+		.menu-toggle {
+		  display: none;
+		  background: none;
+		  border: none;
+		  font-size: 24px;
+		}
+
+		@media (max-width: 768px) {
+		  .navigation-wrapper {
+			display: none;
+			flex-direction: column;
+			width: 100%;
+			background-color: #fff;
+		  }
+
+		  .navigation-wrapper nav ul {
+			flex-direction: column;
+			align-items: center;
+		  }
+
+		  .navigation-wrapper nav ul li {
+			margin: 10px 0;
+		  }
+
+		  .menu-toggle {
+			display: block;
+		  }
+		}
+
+		/* Estilos para mostrar el menú desplegable */
+		.navigation-wrapper.open {
+		  display: flex;
+		}		
+
+		
+
+/* Estilos Cuadro chequeo de disponibilidad */
+	
+		#myDiv {
+		  display: flex; /* Make the div a Flexbox container */
+		  align-items: center; /* Center vertically */
+		  justify-content: center; /* Center horizontally */
+		  max-width: 1100px; /* Set the width as before */
+		  margin: auto;
+		  
+		}
+		form#availabilityForm {
+		  background-color: #fff;
+		  padding: 20px;
+		  border-radius: 8px;
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		  gap: 10px;
+		  align-items: center;
+		}
+
+		form#availabilityForm input {
+		  padding: 10px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  font-size: 14px;
+		  flex: 1;
+		}
+		
+		form#availabilityForm input#emailInput {
+		  width: 270px; /* Adjust the value as desired */
+		}
+
+		form#availabilityForm button {
+		  background-color: #4CAF50;
+		  color: #fff;
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  font-size: 16px;
+		  cursor: pointer;
+		}
+
+		form#availabilityForm button:hover {
+		  background-color: #3e8e41;
+		}
+
+		
+/* Estilos para los campos del formulario de contactos */
+			/* Add styling to the form container */
+		.section form {
+		  display: flex; /* Make the form a flexbox container */
+		  flex-direction: column; /* Stack elements vertically */
+		  gap: 10px; /* Add some spacing between form elements */
+		}
+
+		/* Style the input fields and textarea */
+		.section form input, 
+		.section form textarea {
+		  padding: 10px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  font-size: 14px;
+		  max-width: 570px; /* Set a fixed width for all input fields (optional) */
+		}
+
+		/* Adjust width for specific fields if needed  */
+		.section form input#name,
+		.section form input#email,
+		.section form input#arrival,
+		.section form input#departure {
+		  max-width: 270px; /* Set a fixed width for all input fields (optional) */
+		}
+
+		/* Style the textarea */
+		.section form textarea {
+		  resize: vertical; /* Allow users to resize the textarea */
+		  min-height: 100px; /* Set a minimum height for the textarea */
+		}
+
+		/* Style the submit button */
+		.section form button {
+		  background-color: #4CAF50;
+		  color: #fff;
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  font-size: 16px;
+		  cursor: pointer;
+		  max-width: 270px; 
+		}
+
+		.section form button:hover {
+		  background-color: #3e8e41;
+		}
+
+
+/* Estilos icono flotante de Whatsapp */
+		.whatsapp-float {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 70px;
+			right: 60px;
+			background-color: #25d366;
+			transition: background-color 0.3s ease; /* Add transition for hover */
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 3px #999;
+			z-index: 100;
+		}
+		.whatsapp-float:hover {
+			background-color: #128C7E;
+			display: block; /* Show the text on hover */
+			opacity: 1; /* Make the text fully visible */
+		}
+		.whatsapp-float i {
+			margin-top: 16px;
+		}
+		.whatsapp-text {
+			display: none; /* Hide the text initially */
+			position: absolute;
+			top: 50%;
+			right: calc(100% + 12px); /* Add icon width + padding */
+			transform: translateY(-50%);
+			background-color: #2ECC71;; 
+    		padding: 8px 12px; /* Adjust padding as needed */
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: 600; /* Medium weight */
+			color: white; /* Set text color to white */
+			opacity: 0; /* Hide the text initially */
+			transition: all 0.3s ease; /* Add a smooth transition */
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+		}
+		.whatsapp-float:hover .whatsapp-text {
+			display: block; /* Show the text on hover */
+			opacity: 1; /* Make the text fully visible */
+		}
+
+		
+		
+		
+		/* Banner de politicas y avisos*/
+		.banner {
+		  width: 98%;
+		  height: 100%;
+		  background-color: #f0f0f0;
+		  border-radius: 20px;
+		  padding: 20px;
+		  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		  text-align: center;
+		}
+
+		.banner h1 {
+		  font-size: 3em;
+		  margin: 0;
+		  color: #2196F3;
+		}
+
+		.avisoypoliticas {
+		  width: 80%; /* Adjust width as needed */
+		  margin: 0 auto; /* Center the aviso legal content */
+		  padding: 20px;
+		  border: 1px solid #ccc;
+		  border-radius: 5px;
+		  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.avisoypoliticas h2 {
+		  font-size: 20px;
+		  font-weight: bold;
+		  margin-bottom: 20px;
+		}
+
+		.avisoypoliticas p {
+		  font-size: 16px;
+		  line-height: 1.5;
+		  margin-bottom: 15px;
+		}
+
+		.aavisoypoliticas a {
+		  color: #2196F3; /* Blue link color */
+		  text-decoration: none;
+		  border-bottom: 1px dotted #2196F3;
+		}
+
+		.avisoypoliticas a:hover {
+		  text-decoration: underline;
+		}
+
+
+	/* Estilos del pie de pagina */
+		footer {
+		  background-color: #333; /* Dark background color */
+		  color: #fff; /* White text color */
+		  padding: 20px;
+		  text-align: center;
+		}
+
+		footer p {
+		  margin: 0; /* Remove default paragraph margin */
+		}
+
+		footer a {
+		  color: #fff; /* White link color */
+		  text-decoration: none; /* Remove default link underline */
+		  font-weight: 600; /* Hacer el texto más grueso con mayor granularidad */
+		}
+
+		footer a:hover {
+		  text-decoration: underline; /* Add underline on hover */
+		   color: #ffcc00; /* Gold accent color */
+		}
+
+		footer span {
+		  color: #fff; /* white color */
+		}
+
+
+
+
+
+/* Estilos de la Galeria */
+
+		.container {
+		  max-width: 1700px;
+		  margin: 5% auto;
+		  padding: 20px;
+		  background-color: #fff;
+		  border-radius: 10px;
+		  overflow: hidden;
+		  box-sizing: border-box;
+		  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+		}
+
+		.text-center {
+		  text-align: center;
+		  margin-bottom: 1em;
+		}
+
+		.lightbox-gallery {
+		  display: flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+
+		.lightbox-gallery div > img {
+		  max-width: 100%;
+		  display: block;
+		}
+
+		.lightbox-gallery div {
+		  margin: 10px;
+		  flex-basis: 180px;
+		}
+
+		@media only screen and (max-width: 480px) {
+		  .lightbox-gallery {
+			flex-direction: column;
+			align-items: center;
+		  }
+
+		  .lightbox > div {
+			margin-bottom: 10px;
+		  }
+		}
+
+		/*Lighbox CSS*/
+
+		.lightbox {
+		  display: none;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.7);
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 20;
+		  padding-top: 125px; /*este valor baja la foto de la galeria para que no sea tapada con el menu fijo de navegación*/
+		  box-sizing: border-box;
+		  overflow-y: auto; /* Permitir desplazamiento vertical cuando se está monstrando la imagen grande */
+		}
+
+		.lightbox img {
+		  display: block;
+		  margin: auto;
+		  max-width: 100%;
+		  max-height: calc(100vh - 120px); /* Ajusta para que la imagen no exceda la altura de la ventana */
+		}
+
+		.lightbox .caption {
+		  margin: 15px auto;
+		  width: 50%;
+		  text-align: center;
+		  font-size: 1em;
+		  line-height: 1.5;
+		  font-weight: 700;
+		  color: #eee;
+		}
+
+		.no-scroll {
+		  overflow: hidden;
+		}
+
+
+
+/* EN PRUEBAS BOTON SUBIR*/
+	#scrollTopBtn {
+	  display: none; /* Oculto por defecto */
+	  position: fixed;
+	  bottom: 20px;
+	  right: 20px;
+	  z-index: 99;
+	  font-size: 18px;
+	  border: none;
+	  outline: none;
+	  background-color: #333;
+	  color: white;
+	  cursor: pointer;
+	  padding: 15px;
+	  border-radius: 4px;
+	}
+
+	#scrollTopBtn:hover {
+	  background-color: #555;
+}

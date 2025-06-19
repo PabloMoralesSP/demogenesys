@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Rurla Los Robles</title>
+	<!-- ... otros elementos ... -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="CSS/miCSS.css">
+	
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="JS/miArchivo.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	  (function (g, e, n, es, ys) {
+		g['_genesysJs'] = e;
+		g[e] = g[e] || function () {
+		  (g[e].q = g[e].q || []).push(arguments)
+		};
+		g[e].t = 1 * new Date();
+		g[e].c = es;
+		ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+	  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
+		environment: 'prod-euw1',
+		deploymentId: '07eecaba-b4c7-42ab-9d97-c3c5b67b428b'
+	  });
+</script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="header-container"> 
+			<div class="logo">
+			  <a href="index.html">
+				<img src="ImagenesGaleria/Logo/Logo_Los_Robles.png" alt="Casa Rural Los Robles">
+			  </a>
+			</div>
+			<!-- ... Menu navegación pantallas Grandes ... -->
+			<div class="navigation-wrapper">
+			<nav>
+				<ul id="nav-menu">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="lacasa.html">Casa Rural</a></li>
+					<li><a href="tarifas-disponibilidad.html">Tarifas y Disponibilidad</a></li>
+					<li><a href="entorno.html">Entorno y Actividades</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			<button class="menu-button" id="menuButton"> ☰ MENÚ</button>
+			</nav>
+			</div> 
+			<!-- ... Menu Navegación pantallas pequeñas... -->
+			<div class="mobile-nav" id="mobileNav">
+			<button class="close-button" id="closeButton">X</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="lacasa.html">Casa Rural</a></li>
+					<li><a href="tarifas-disponibilidad.html">Tarifas y Disponibilidad</a></li>
+					<li><a href="entorno.html">Entorno y Actividades</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+			</div>
+		</div>
+    </header>
+    <main>
+
+		<div class="containerDiv"  id="dynamicBgDiv">
+			<section class="section1">
+				<h1>Casa Rural Los Robles</h1>
+				<h2>Conoce la Arquitectura Negra desde uno de los pueblos con más encanto, 'Valverde de los Arroyos'.</br> 
+				Si te gusta la naturaleza y la grastronomia de la sierra norte de Guadalajra, estás en el sitio adecuado.</h2>
+			</section>
+		</div>
+		<p></p>		
+		<div id="myDiv">
+			<form id="availabilityForm">
+			  <input type="email" id="emailInput" placeholder="Tu Email">
+			  <input type="date" id="arrivalInput" placeholder="Llegada dd/mm/yyyy">
+			  <input type="date" id="departureInput" placeholder="Salida dd/mm/yyyy">
+			  <button type="button" onclick="redirectToContact()">Preguntar Disponibilidad</button>
+			</form>
+		</div>
+
+	
+		<div class="containerDivnormal">		
+
+			<section class="section1">	
+				<p></p>		
+				<h2>Los Robles, una casa con encanto</h2>
+				<p>Esta casa de campo se encuentra <strong> en la localidad de Zarzuela de Galve</strong>, aldea a 10 minutos andando de Vavlerde de los Arroyos y <strong>al pie del Ocejón</strong> , en un entorno rural caracteristico por sus cuidadas construcciones de mampostería de piedra y cubiertas de pizarra. Todo ello, lo convierten en uno de los máximos exponentes de la <strong>Arquitectura Negra</strong>, propia de la <strong>Sierra Norte de Guadalajara</strong>.</p>
+			</section>
+			
+		
+			<section class="section2-padding-left">
+				<h3>Sobre La Casa Rural los Robles</h3>
+				<div class="containercarousel">
+					<div class="carousel">
+						<img src="ImagenesGaleria/Casa/casa_fachada.jpg" alt="Casa rural Los Robles">
+						<img src="ImagenesGaleria/Casa/chimenea.jpg" alt="Chimenea Salon">
+						<img src="ImagenesGaleria/Casa/cocina.jpg" alt="Cocina">
+						<img src="ImagenesGaleria/Casa/habitacion_2.jpg" alt="Habitación Secundaria">
+						<img src="ImagenesGaleria/Casa/habitacion_principal.jpg" alt="Habitación Principal">
+						<img src="ImagenesGaleria/Casa/salon_chimenea.jpg" alt="Salón con Chimenea">
+					</div>
+				</div>
+				<div class="boton-centrado">
+					<a href="lacasa.html"> <img src="ImagenesGaleria/HojaSuelta/HojaSuelta.png" alt="Hoja de Roble">Ver la Casita Rural</a>
+				</div>
+			</section>
+			
+			<section class="section2-padding-right">
+				<div class="texto">
+					<br>					
+					<p>Estamos en Zarzuela de Galve, en la falda del pico del Ocejón y a 10 minutos andando de Vavlerde de los Arroyos, icono de los pueblos de la Ruta de la Arquitectura Negra. 
+					Un lugar encantador y único, en un entorno privilegiado del Parque Natural de la Sierra Norte de Guadalajara.</p>
+					<p>La casa rural Los Robles cuenta con dos plantas.En su planta baja principal con una cocina totalmente equipada, salón-comedor donde poder disfrutar de sus amigos o familiares al calor de la chimenea, baño completo y habitación de matrimonio.
+					La planta alta está abuhardillada, mantiene las vigas y pilares de madera principales originales de su construcción, cuenta con un aseo, una cama de matrimonio, y una cama individual, todo el conjunto con una decoración sencilla y rústica.</p>
+					<div class="lista-doble">
+						<ul class="check-list sin-puntos">
+							<li>A los pies del Pico Ocejón</li>
+							<li>2 dormitorios independientes</li>
+							<li>Cocina equipada</li>
+							<li>Salón con Chimenea</li>
+						</ul>
+						<ul class="check-list sin-puntos">
+							<li>Leña disponible</li>
+							<li>Se admite mascotas</li>
+							<li>Wi-Fi gratis</li>							
+							<li>Recepción telefónica 24h</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+
+
+		<div class="containerDivnormal">		
+			<section class="section2-padding-left">
+			<br>
+			<h3>Un entorno natural único y singular</h3>
+				<div class="texto">
+					<p>Es el entorno natural ideal para conectar con tu cuerpo y alma, disfrutando del silencio y la gratronomia, o activandote con las mejores actividades en la naturaleza.</p>
+					<p>Paraje natural único, está repleto de <strong>rutas de senderismo y MTB</strong>, asi como <strong>actividades acuaticas</strong> como rápel por cascada.</p>			
+					<div class="lista-doble">
+						<ul class="check-list sin-puntos">
+							<li>Ruta subida al Pico del Ocejón</li>
+							<li>Ruta Chorreras de Despeñalagua</li>
+							<li>Recogida de Setas</li>							
+						</ul>
+						<ul class="check-list sin-puntos">
+							<li>Baños naturales </li>
+							<li>Rapel en las Chorreras</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section2-padding-right">
+			<br>
+			
+				<div class="containercarousel">
+					<div class="carousel">
+						<img src="ImagenesGaleria/Entorno/OcejondesdeCerroMonte.jpg" alt="Ocejon desde Cerro del Monte">
+						<img src="ImagenesGaleria/Entorno/CerroMonte.jpg" alt="Cerro del Monte">
+						<img src="ImagenesGaleria/Entorno/chorreras.jpg" alt="Chorreras de Despeñalagua">
+						<img src="ImagenesGaleria/Entorno/SubidaOcejonNevada.jpg" alt="Subida Nevada al Ocejón">
+						<img src="ImagenesGaleria/Entorno/PicoOcejon.jpg" alt="Pico Ocejón">
+						<img src="ImagenesGaleria/Entorno/CuevadelReloje.jpg" alt="Cueva del Reloje">					
+					</div>
+				</div>
+				<div class="boton-centrado">
+				<a href="entorno.html"> <img src="ImagenesGaleria/HojaSuelta/HojaSuelta.png" alt="Hoja de Roble">Entorno y Actividades </a>
+				</div>
+			</section>
+		</div>
+		
+		<div class="containerDivnormal">		
+			<section class="section2-padding-left">
+				<h3>Revisas nuestras ofertas y contactanos para cualqueir duda . . .</h3>
+				<p>Nuestras tarifas son las más económicas de la zona. ¡¡No te pierdas nuestras ofertas!!.</p>
+				
+				<div class="boton-izquierda">
+					<a href="tarifas-disponibilidad.html"> <img src="ImagenesGaleria/HojaSuelta/HojaSuelta.png" alt="Hoja de Roble">Tarifas y Ofertas </a>
+				</div>
+
+			</section>
+			
+		</div>
+    </main>
+	
+	<a href="https://api.whatsapp.com/send/?phone=34678985395&text&type=phone_number&app_absent=0" 
+       class="whatsapp-float" 
+       target="_blank"
+       rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+		<span class="whatsapp-text">¿Podemos ayudarle?</span>
+    </a>
+
+	  <button id="scrollTopBtn" title="Go to top">
+		<i class="fas fa-angle-up"></i>
+	  </button>
+ 
+    <footer>
+        <div >
+			<span>© Copyright 2025 </span><a href="index.html">Casa Rural Los Robles</a> <span>Todos los derechos reservados.</span>
+			<span><p><a href="./Politicas/avisolegal.html">Aviso Legal</a>&nbsp;|&nbsp;<a href="./Politicas/politicaprivacidad.html">Política de Privacidad</a> | <a href="./Politicas/politicacookies.html">Política de Cookies</a> |&nbsp;<a href="./Politicas/politicacancelacionreservas.html">Política Reservas de Cancelación&nbsp;|</a> </span></<br><span>by PMM</span>
+			</p>	
+		</div>
+    </footer>
+	<script src="JS/miArchivo.js"></script>
+</body>
+</html>
