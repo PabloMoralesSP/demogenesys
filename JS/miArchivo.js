@@ -1,18 +1,26 @@
 
-
 //CODIGO JAVA SCRIPT BOTON DEMO GENESYS
-	  (function (g, e, n, es, ys) {
-		g['_genesysJs'] = e;
-		g[e] = g[e] || function () {
-		  (g[e].q = g[e].q || []).push(arguments)
-		};
-		g[e].t = 1 * new Date();
-		g[e].c = es;
-		ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-	  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
-		environment: 'prod-euw1',
-		deploymentId: '07eecaba-b4c7-42ab-9d97-c3c5b67b428b'
-	  });
+
+setTimeout(() => {
+  (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script');
+    ys.async = 1;
+    ys.src = n;
+    ys.charset = 'utf-8';
+    document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod-euw1',
+    deploymentId: '07eecaba-b4c7-42ab-9d97-c3c5b67b428b'
+  });
+}, 0);
+
+
 
 
 //CODIGO JAVA SCRIPT ANIMACIÓN CAIDA DE HOJAS AL PULSAR UN BOTON DEL MENU
